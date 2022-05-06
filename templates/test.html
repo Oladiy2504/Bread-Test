@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="" method="post" novalidate class="bread-form">
+   {{ form.hidden_tag() }}
+   <p>Какой ты хлеб? {{ form.select(type='select', class='form_select') }}</p>
+   <p>{{ form.submit(type="submit", class="btn btn-primary2") }}</p>
+</form>
+{% endblock %}

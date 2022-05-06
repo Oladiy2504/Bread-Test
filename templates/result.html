@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if res == 'Багет' %}
+        <img class='bread_img' src="/static/img/baget.jpg">
+ {% elif res == 'Оладий' %}
+       <img class='bread_img' src="/static/img/oladiy.jpg">
+ {% elif res == 'Черный хлеб' %}
+       <img class='bread_img' src="/static/img/black.jpg">
+ {% elif res == 'Белый хлеб' %}
+       <img class='bread_img' src="/static/img/white.jpg">
+ {% else %}
+       <img class='bread_img' src="/static/img/human.jpg">
+ {% endif %}
+ {% if res != 'Я не хлеб!' %}
+ <div class="m_div"><p class="p_br">Поздравляем! Вы - {{ res }}!</p></div>
+ {% else %}
+ <div class="m_div"><p class="p_br">Поздравляем! Вы не хлеб!</p></div>
+ {% endif %}
+ <form action="" method="post" novalidate class="end-form">
+   {{ form.hidden_tag() }}
+   <p>{{ form.submit(type="submit", class="btn btn-primary3") }}</p>
+ </form>
+{% endblock %}

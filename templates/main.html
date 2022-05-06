@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<img class='bread_img' src="/static/img/bread.jpg">
+<form action="" method="post" novalidate class="way-form">
+   {{ form.hidden_tag() }}
+   <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
+</form>
+{% endblock %}
